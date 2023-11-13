@@ -1,13 +1,15 @@
+
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include <doctest/doctest.h>
+
 #include <sstream>
 #include <stdexcept>
 
 #include <reprocase/version.hxx>
 #include <reprocase/reprocase.hxx>
 
-#undef NDEBUG
-#include <cassert>
 
-int main ()
+TEST_CASE("basics")
 {
   using namespace std;
   using namespace reprocase;
@@ -17,7 +19,7 @@ int main ()
   {
     ostringstream o;
     say_hello (o, "World");
-    assert (o.str () == "Hello, World!\n");
+    CHECK (o.str () == "Hello, World!\n");
   }
 
   // Empty name.
@@ -26,10 +28,10 @@ int main ()
   {
     ostringstream o;
     say_hello (o, "");
-    assert (false);
+    CHECK (false);
   }
   catch (const invalid_argument& e)
   {
-    assert (e.what () == string ("empty name"));
+    CHECK (e.what () == string ("empty name"));
   }
 }
