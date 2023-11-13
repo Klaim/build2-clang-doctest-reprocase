@@ -1,0 +1,14 @@
+: 1
+name: reprocase
+version: 0.1.0-a.0.z
+type: lib
+language: c++
+summary: reprocase C++ library
+license: other: proprietary ; Not free/open source.
+description-file: README.md
+url: https://example.org/reprocase
+email: mjklaim@gmail.com
+#build-error-email: mjklaim@gmail.com
+depends: * build2 >= 0.16.0
+depends: * bpkg >= 0.16.0
+#depends: libhello ^1.0.0
