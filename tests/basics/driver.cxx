@@ -1,12 +1,12 @@
 
+import reprocase;
+
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest/doctest.h>
 
 #include <sstream>
 #include <stdexcept>
 
-#include <reprocase/version.hxx>
-#include <reprocase/reprocase.hxx>
 
 
 TEST_CASE("basics")

@@ -1,7 +1,8 @@
-#include <reprocase/reprocase.hxx>
-
+module;
 #include <ostream>
 #include <stdexcept>
+
+module reprocase;
 
 using namespace std;
 
